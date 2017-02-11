@@ -86,7 +86,7 @@ public class EcoQuizActivity extends Activity{
         if(!scores.containsKey(section)) {
             scores.put(section, 0);
         }
-        calcScore(curq);
+        calcScore(curq, v);
         */
 
         if(mIndex < q.size())
@@ -94,8 +94,50 @@ public class EcoQuizActivity extends Activity{
             askQuestion();
     }
 
-    public void calcScore(Question curq) {
+    public void calcScore(Question curq, View v) {
+        boolean top = curq.topGood();
+        int mult;
+        if (top) {
+            mult = 1;
+        }
+        else {
+            mult = -1;
+        }
         String section = curq.getSection();
+        int importance = curq.getImportance();
+        switch(v.getId()) {
+            //THIS SHOULD MAYBE WORK?
+            case R.id.button1:
+                if (!scores.keySet().contains(section)) {
+                    scores.put(section, importance*(mult % 6));
+                }
+                scores.put(section, importance*(mult % 6) + scores.get(section));
+                break;
+            case R.id.button2:
+                if (!scores.keySet().contains(section)) {
+                    scores.put(section, importance*(mult*2 % 6));
+                }
+                scores.put(section, importance*(mult*2 % 6) + scores.get(section));
+                break;
+            case R.id.button3:
+                if (!scores.keySet().contains(section)) {
+                    scores.put(section, importance*(mult*3 % 6));
+                }
+                scores.put(section, importance*(mult*3 % 6) + scores.get(section));
+                break;
+            case R.id.button4:
+                if (!scores.keySet().contains(section)) {
+                    scores.put(section, importance*(mult*4 % 6));
+                }
+                scores.put(section, importance*(mult*4 % 6) + scores.get(section));
+                break;
+            case R.id.button5:
+                if (!scores.keySet().contains(section)) {
+                    scores.put(section, importance*(mult*5 % 6));
+                }
+                scores.put(section, importance*(mult*5 % 6) + scores.get(section));
+                break;
+        }
 
        // int score = scores.get(section) + curq.getImportance()*
                 //scores.put(section,
