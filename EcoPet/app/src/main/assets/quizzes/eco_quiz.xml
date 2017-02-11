@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<quiz>
+    <!--TRANSPORTATION SECTION-->
+    <question>
+        <text>How often do you drive a car?</text>
+        <section>Transportation</section>
+        <answer>Never (don't own a car)</answer>
+        <answer>Rarely (once a week or less)</answer>
+        <answer>Sometimes (2-4 times a week)</answer>
+        <answer>Frequently (once a day)</answer>
+        <answer>Always (multiple times a day)</answer>
+    </question>
+
+    <question>
+        <text>How often do you rent a car/carpool/Uber?</text>
+        <section>Transportation</section>
+        <answer>Never</answer>
+        <answer>Rarely (once a week or less)</answer>
+        <answer>Sometimes (2-4 times a week)</answer>
+        <answer>Frequently (once a day)</answer>
+        <answer>Always (multiple times a day)</answer>
+    </question>
+
+    <question>
+        <text>How often do you use public transportation?</text>
+        <section>Transportation</section>
+        <answer>Never</answer>
+        <answer>Rarely (once a week or less)</answer>
+        <answer>Sometimes (2-4 times a week)</answer>
+        <answer>Frequently (once a day)</answer>
+        <answer>Always (multiple times a day)</answer>
+    </question>
+
+    <question>
+        <text>How often do you walk/bike?</text>
+        <section>Transportation</section>
+        <answer>Never</answer>
+        <answer>Rarely (once a week or less)</answer>
+        <answer>Sometimes (2-4 times a week)</answer>
+        <answer>Frequently (once a day)</answer>
+        <answer>Always (multiple times a day)</answer>
+    </question>
+
+    <!--FOOD SECTION-->
+    <question>
+        <text>How often do you shop for your own food?</text>
+        <section>Food</section>
+        <answer>Never</answer>
+        <answer>Rarely (less than 10% of the time)</answer>
+        <answer>Sometimes (10 - 30% of the time)</answer>
+        <answer>Frequently (30 - 70% of the time)</answer>
+        <answer>Always (70 - 100% of the time)</answer>
+    </question>
+
+    <question>
+        <text>How often do you eat out?</text>
+        <section>Food</section>
+        <answer>Never</answer>
+        <answer>Rarely (less than 10% of the time)</answer>
+        <answer>Sometimes (10 - 30% of the time)</answer>
+        <answer>Frequently (30 - 70% of the time)</answer>
+        <answer>Always (70 - 100% of the time)</answer>
+    </question>
+
+    <question>
+        <text>How often do you use disposable dinnerware and cutlery?</text>
+        <section>Food</section>
+        <answer>Never</answer>
+        <answer>Rarely (less than 10% of the time)</answer>
+        <answer>Sometimes (10 - 30% of the time)</answer>
+        <answer>Frequently (30 - 70% of the time)</answer>
+        <answer>Always (70 - 100% of the time)</answer>
+    </question>
+
+    <question>
+        <text>How often do you use disposable dinnerware (paper plates/takeout boxes) and cutlery?</text>
+        <section>Food</section>
+        <answer>Never</answer>
+        <answer>Rarely (less than once a week)</answer>
+        <answer>Sometimes (2 - 3 times a week)</answer>
+        <answer>Frequently (once a day)</answer>
+        <answer>Always (multiple times a day)</answer>
+    </question>
+
+    <question>
+        <text>How often do you use disposable plastic water bottles?</text>
+        <section>Food</section>
+        <answer>Never</answer>
+        <answer>Rarely (less than twice a week)</answer>
+        <answer>Sometimes (3-5 of the time)</answer>
+        <answer>Frequently (almost daily)</answer>
+        <answer>Always (only use plastic water bottles)</answer>
+    </question>
+
+    <!--UTILITIES SECTION-->
+    <question>
+        <text>How of often do you use a laptop/desktop computer?</text>
+        <section>Utilities</section>
+        <answer>Never (don't own one)</answer>
+        <answer>Rarely (less than 3 hours a day)</answer>
+        <answer>Sometimes (3 - 5 hours a day)</answer>
+        <answer>Frequently (5 - 8 hours a day)</answer>
+        <answer>Always (8+ hours a day)</answer>
+    </question>
+
+    <question>
+        <text>How of often do you use a smartphone?</text>
+        <section>Utilities</section>
+        <answer>Never (don't own one)</answer>
+        <answer>Rarely (less than 3 hours a day)</answer>
+        <answer>Sometimes (3 - 5 hours a day)</answer>
+        <answer>Frequently (5 - 7 hours a day)</answer>
+        <answer>Always (7+ hours a day)</answer>
+    </question>
+
+    <question>
+        <text>How of often do you keep lights on indoors during the day (when natural lighting is an alternative)?</text>
+        <section>Utilities</section>
+        <answer>Never (less than 1 hour a day)</answer>
+        <answer>Rarely (1 - 3 hours a day)</answer>
+        <answer>Sometimes (3 - 5 hours a day)</answer>
+        <answer>Frequently (5 - 7 hours a day)</answer>
+        <answer>Always (8+ hours a day)</answer>
+    </question>
+
+    <question>
+        <text>How many appliances do you have plugged in that you are not currently using (electricity phantoms)?</text>
+        <section>Utilities</section>
+        <answer>None</answer>
+        <answer>A few (1 - 3 appliances)</answer>
+        <answer>Some (3 - 5 appliances)</answer>
+        <answer>Many (5 - 7 appliances)</answer>
+        <answer>ELECTRICITY VAMPIRE (7+ appliances)</answer>
+    </question>
+</quiz>
