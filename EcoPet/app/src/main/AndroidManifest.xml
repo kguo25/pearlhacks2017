@@ -16,6 +16,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".EcoQuizActivity"></activity>
+        <activity android:name=".ResultsActivity"></activity>
     </application>
 
 </manifest>

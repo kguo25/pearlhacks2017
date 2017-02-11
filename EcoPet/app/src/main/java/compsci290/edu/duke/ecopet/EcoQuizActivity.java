@@ -2,6 +2,7 @@ package compsci290.edu.duke.ecopet;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -89,9 +90,15 @@ public class EcoQuizActivity extends Activity{
         calcScore(curq);
         */
 
-        if(mIndex < q.size())
+        if(mIndex < q.size()) {
             mIndex++;
             askQuestion();
+        }
+        else {
+            Intent i = new Intent(EcoQuizActivity.this, ResultsActivity.class);
+            startActivity(i);
+            this.finish();
+        }
     }
 
     public void calcScore(Question curq) {
