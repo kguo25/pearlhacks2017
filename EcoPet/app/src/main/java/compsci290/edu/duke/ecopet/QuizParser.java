@@ -45,6 +45,8 @@ public class QuizParser {
     public Question readQuestion(XmlPullParser parser) throws XmlPullParserException, IOException {
         String q = "";
         String s = "";
+        String good = "";
+        String imp = "";
         List<String> choices = new ArrayList<>();
         parser.require(XmlPullParser.START_TAG, ns, "question");
         while(parser.next() != XmlPullParser.END_TAG) {
@@ -56,14 +58,20 @@ public class QuizParser {
             if (name.equals("text")) {
                 q = readText(parser);
             }
-            if(name.equals("section")) {
+            else if(name.equals("section")) {
                 s = readText(parser);
+            }
+            else if(name.equals("good")) {
+                good = readText(parser);
+            }
+            else if(name.equals("importance")) {
+                imp = readText(parser);
             }
             else if(name.equals("answer")) {
                 choices.add(readText(parser));
             }
         }
-        return new Question(q, s, choices);
+        return new Question(q, s, good, imp, choices);
     }
 
     private String readText(XmlPullParser parser) throws IOException, XmlPullParserException {

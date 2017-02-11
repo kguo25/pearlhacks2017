@@ -3,6 +3,8 @@
     <!--TRANSPORTATION SECTION-->
     <question>
         <text>How often do you drive a car?</text>
+        <good>top</good>
+        <importance>5</importance>
         <section>Transportation</section>
         <answer>Never (don't own a car)</answer>
         <answer>Rarely (once a week or less)</answer>
@@ -13,6 +15,8 @@
 
     <question>
         <text>How often do you rent a car/carpool/Uber?</text>
+        <good>bottom</good>
+        <importance>3</importance>
         <section>Transportation</section>
         <answer>Never</answer>
         <answer>Rarely (once a week or less)</answer>
@@ -23,6 +27,8 @@
 
     <question>
         <text>How often do you use public transportation?</text>
+        <good>bottom</good>
+        <importance>4</importance>
         <section>Transportation</section>
         <answer>Never</answer>
         <answer>Rarely (once a week or less)</answer>
@@ -33,6 +39,8 @@
 
     <question>
         <text>How often do you walk/bike?</text>
+        <good>bottom</good>
+        <importance>5</importance>
         <section>Transportation</section>
         <answer>Never</answer>
         <answer>Rarely (once a week or less)</answer>
@@ -44,6 +52,8 @@
     <!--FOOD SECTION-->
     <question>
         <text>How often do you shop for your own food?</text>
+        <good>bottom</good>
+        <importance>3</importance>
         <section>Food</section>
         <answer>Never</answer>
         <answer>Rarely (less than 10% of the time)</answer>
@@ -54,16 +64,8 @@
 
     <question>
         <text>How often do you eat out?</text>
-        <section>Food</section>
-        <answer>Never</answer>
-        <answer>Rarely (less than 10% of the time)</answer>
-        <answer>Sometimes (10 - 30% of the time)</answer>
-        <answer>Frequently (30 - 70% of the time)</answer>
-        <answer>Always (70 - 100% of the time)</answer>
-    </question>
-
-    <question>
-        <text>How often do you use disposable dinnerware and cutlery?</text>
+        <good>top</good>
+        <importance>3</importance>
         <section>Food</section>
         <answer>Never</answer>
         <answer>Rarely (less than 10% of the time)</answer>
@@ -74,6 +76,8 @@
 
     <question>
         <text>How often do you use disposable dinnerware (paper plates/takeout boxes) and cutlery?</text>
+        <good>top</good>
+        <importance>2</importance>
         <section>Food</section>
         <answer>Never</answer>
         <answer>Rarely (less than once a week)</answer>
@@ -84,6 +88,8 @@
 
     <question>
         <text>How often do you use disposable plastic water bottles?</text>
+        <good>top</good>
+        <importance>5</importance>
         <section>Food</section>
         <answer>Never</answer>
         <answer>Rarely (less than twice a week)</answer>
@@ -95,6 +101,8 @@
     <!--UTILITIES SECTION-->
     <question>
         <text>How of often do you use a laptop/desktop computer?</text>
+        <good>top</good>
+        <importance>3</importance>
         <section>Utilities</section>
         <answer>Never (don't own one)</answer>
         <answer>Rarely (less than 3 hours a day)</answer>
@@ -105,6 +113,8 @@
 
     <question>
         <text>How of often do you use a smartphone?</text>
+        <good>top</good>
+        <importance>2</importance>
         <section>Utilities</section>
         <answer>Never (don't own one)</answer>
         <answer>Rarely (less than 3 hours a day)</answer>
@@ -115,6 +125,8 @@
 
     <question>
         <text>How of often do you keep lights on indoors during the day (when natural lighting is an alternative)?</text>
+        <good>top</good>
+        <importance>3</importance>
         <section>Utilities</section>
         <answer>Never (less than 1 hour a day)</answer>
         <answer>Rarely (1 - 3 hours a day)</answer>
@@ -125,6 +137,8 @@
 
     <question>
         <text>How many appliances do you have plugged in that you are not currently using (electricity phantoms)?</text>
+        <good>top</good>
+        <importance>1</importance>
         <section>Utilities</section>
         <answer>None</answer>
         <answer>A few (1 - 3 appliances)</answer>

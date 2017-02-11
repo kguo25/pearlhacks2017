@@ -23,7 +23,6 @@ public class EcoQuizActivity extends Activity{
     private HashMap<String, Integer> scores;
 
     private static String INDEX = "INDEX";
-    private static String SCORE = "SCORE";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -67,6 +66,8 @@ public class EcoQuizActivity extends Activity{
     public void askQuestion() {
         if(mIndex < q.size()) {
             Question curq = q.getQuestion(mIndex);
+            System.out.println("Importance = " + curq.getImportance());
+            System.out.println("Top = " + curq.topGood());
             myQuestionView.setText(curq.getText());
             mySectionView.setText("Section: " + curq.getSection());
             String[] answers = curq.getAnswers();
@@ -79,9 +80,28 @@ public class EcoQuizActivity extends Activity{
     }
 
     public void click(View v) {
+        /*
+        Question curq = q.getQuestion(mIndex);
+        String section = curq.getSection();
+        if(!scores.containsKey(section)) {
+            scores.put(section, 0);
+        }
+        calcScore(curq);
+        */
+
         if(mIndex < q.size())
             mIndex++;
             askQuestion();
+    }
 
+    public void calcScore(Question curq) {
+        String section = curq.getSection();
+
+       // int score = scores.get(section) + curq.getImportance()*
+                //scores.put(section,
+    }
+
+    public boolean getButton() {
+        return true;
     }
 }
