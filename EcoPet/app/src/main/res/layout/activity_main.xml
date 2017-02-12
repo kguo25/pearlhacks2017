@@ -19,6 +19,13 @@
         android:textSize="30sp"
         android:text="Welcome to EcoPet!" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="24dp"
+        android:textSize="20sp"
+        android:text="Your goal is to make the fox happy by improving your EcoScore. Your goal is to get the lowest EcoScore possible! First, you'll take a diagnostic quiz. Then, you could make eco-friendly lifestyle choices to lower your score. Are you ready?" />
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -28,17 +35,9 @@
             android:id="@+id/new_user_quiz"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="New User"
+            android:text="Begin"
             android:layout_marginRight="25dp"
             android:onClick="onClick"/>
-
-        <Button
-            android:id="@+id/new_quiz"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Log in via Facebook"
-            android:layout_marginLeft="25dp"
-            android:onClick="facebookLogin"/>
 
     </LinearLayout>
 </LinearLayout>

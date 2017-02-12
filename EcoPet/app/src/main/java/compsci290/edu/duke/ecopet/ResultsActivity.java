@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.widget.TextView;
 
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.data.PieData;
@@ -32,14 +33,11 @@ public class ResultsActivity extends Activity {
         setContentView(R.layout.results_activity);
 
         //get the category scores
-        SharedPreferences sharedPref = this.getSharedPreferences("Section", 0);
-//        int portscore = sharedpref.getint("transportation", 0);
-//        int utilscore = sharedpref.getint("utilities", 0);
-//        int foodScore = sharedPref.getInt("food", 0);
-        int portScore = 20;
-        int utilScore = 15;
-        int foodScore = 43;
-        int totalScore = portScore + utilScore + foodScore
+        SharedPreferences prefs = getSharedPreferences("Sections", MODE_PRIVATE);
+        int portScore = prefs.getInt("Transportation", 0);
+        int utilScore = prefs.getInt("Utilities", 0);
+        int foodScore = prefs.getInt("Food", 0);
+        int totalScore = portScore + utilScore + foodScore;
 
         if (totalScore != 0) {
             //add values to pie chart
@@ -50,8 +48,8 @@ public class ResultsActivity extends Activity {
             pieChart.setHoleRadius(40f);
             pieChart.setTransparentCircleRadius(0);
             pieChart.setDrawCenterText(true);
-            pieChart.setCenterText("Score Distribution");
-            pieChart.setCenterTextSize(20);
+            pieChart.setCenterText(totalScore + "");
+            pieChart.setCenterTextSize(40);
 
             ArrayList<PieEntry> entries = new ArrayList<PieEntry>();
             entries.add(new PieEntry((float) portScore / totalScore, "Transportation"));
@@ -65,10 +63,10 @@ public class ResultsActivity extends Activity {
 
             //formatting
             data.setValueFormatter(new PercentFormatter());
-            data.setValueTextSize(12f);
+            data.setValueTextSize(16f);
+            pieChart.setEntryLabelTextSize(16f);
             data.setValueTextColor(Color.WHITE);
             pieChart.getLegend().setEnabled(false);
-
             pieChart.setData(data);
             pieChart.invalidate(); // refresh
         }else{

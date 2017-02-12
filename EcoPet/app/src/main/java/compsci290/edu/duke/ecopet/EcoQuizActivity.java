@@ -3,9 +3,11 @@ package compsci290.edu.duke.ecopet;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import java.io.InputStream;
@@ -44,12 +46,19 @@ public class EcoQuizActivity extends Activity{
     @Override
     public void onRestoreInstanceState(Bundle savedInstanceState){
         mIndex = savedInstanceState.getInt(INDEX);
+        scores.put("Transportation", savedInstanceState.getInt("Transportation"));
+        scores.put("Food", savedInstanceState.getInt("Food"));
+        scores.put("Utilities", savedInstanceState.getInt("Utilities"));
         askQuestion();
     }
 
     @Override
     public void onSaveInstanceState(Bundle state){
         state.putInt(INDEX,mIndex);
+        state.putInt("Transportation", scores.get("Transportation"));
+        state.putInt("Utilities", scores.get("Utilities"));
+        state.putInt("Food", scores.get("Food"));
+
     }
 
     private void createQuiz(Context context) {
@@ -67,8 +76,9 @@ public class EcoQuizActivity extends Activity{
     public void askQuestion() {
         if(mIndex < q.size()) {
             Question curq = q.getQuestion(mIndex);
-            System.out.println("Importance = " + curq.getImportance());
-            System.out.println("Top = " + curq.topGood());
+            ProgressBar pb = (ProgressBar)findViewById(R.id.progressBar);
+            int progress = (int) ((double)mIndex/q.size() * 100);
+            pb.setProgress(progress);
             myQuestionView.setText(curq.getText());
             mySectionView.setText("Section: " + curq.getSection());
             String[] answers = curq.getAnswers();
@@ -81,34 +91,73 @@ public class EcoQuizActivity extends Activity{
     }
 
     public void click(View v) {
-        /*
-        Question curq = q.getQuestion(mIndex);
-        String section = curq.getSection();
-        if(!scores.containsKey(section)) {
-            scores.put(section, 0);
-        }
-        calcScore(curq);
-        */
-
+        System.out.println("mindex" + mIndex);
+        calcScore(q.getQuestion(mIndex), v);
+        mIndex++;
         if(mIndex < q.size()) {
-            mIndex++;
             askQuestion();
         }
         else {
+            savePreferences();
+            SharedPreferences prefs = getSharedPreferences("Sections", MODE_PRIVATE);
+            int temp= prefs.getInt("Utilities", -1);
+            System.out.println(temp);
             Intent i = new Intent(EcoQuizActivity.this, ResultsActivity.class);
             startActivity(i);
             this.finish();
         }
     }
 
-    public void calcScore(Question curq) {
-        String section = curq.getSection();
-
-       // int score = scores.get(section) + curq.getImportance()*
-                //scores.put(section,
+    public void savePreferences() {
+        SharedPreferences prefs = getSharedPreferences("Sections", MODE_PRIVATE);
+        SharedPreferences.Editor editor = prefs.edit();
+        for(String key : scores.keySet()) {
+            editor.putInt(key, scores.get(key));
+        }
+        editor.commit();
     }
 
-    public boolean getButton() {
-        return true;
+    public void calcScore(Question curq, View v) {
+        boolean top = curq.topGood();
+        int mult = 1;
+        if (!top) mult = -1;
+        String section = curq.getSection();
+        int importance = curq.getImportance();
+        switch(v.getId()) {
+            case R.id.button1:
+                if (!scores.keySet().contains(section)) {
+                    scores.put(section, 0);
+                }
+                scores.put(section, mult*importance*(mult % 6)-1 + scores.get(section));
+                break;
+            case R.id.button2:
+                if (!scores.keySet().contains(section)) {
+                    scores.put(section, 0);
+                }
+                scores.put(section, mult*importance*(mult*2 % 6)-1 + scores.get(section));
+                break;
+            case R.id.button3:
+                if (!scores.keySet().contains(section)) {
+                    scores.put(section, 0);
+                }
+                scores.put(section, mult*importance*(mult*3 % 6)-1 + scores.get(section));
+                break;
+            case R.id.button4:
+                if (!scores.keySet().contains(section)) {
+                    scores.put(section, 0);
+                }
+                scores.put(section, mult*importance*(mult*4 % 6)-1 + scores.get(section));
+                scores.put(section, mult*(mult*4 % 6)-1 + scores.get(section));
+                break;
+            case R.id.button5:
+                if (!scores.keySet().contains(section)) {
+                    scores.put(section, 0);
+                }
+                scores.put(section, mult*importance*(mult*5 % 6)-1 + scores.get(section));
+                break;
+            default:
+                break;
+
+        }
     }
 }

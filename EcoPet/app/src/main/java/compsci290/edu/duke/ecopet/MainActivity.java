@@ -16,10 +16,5 @@ public class MainActivity extends AppCompatActivity {
     public void onClick(View v) {
         Intent i = new Intent(MainActivity.this, EcoQuizActivity.class);
         startActivity(i);
-        this.finish();
-    }
-
-    public void facebookLogin(View v) {
-
     }
 }
