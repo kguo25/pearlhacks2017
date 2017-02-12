@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import java.io.InputStream;
@@ -67,8 +68,9 @@ public class EcoQuizActivity extends Activity{
     public void askQuestion() {
         if(mIndex < q.size()) {
             Question curq = q.getQuestion(mIndex);
-            System.out.println("Importance = " + curq.getImportance());
-            System.out.println("Top = " + curq.topGood());
+            ProgressBar pb = (ProgressBar)findViewById(R.id.progressBar);
+            int progress = (int) ((double)mIndex/q.size() * 100);
+            pb.setProgress(progress);
             myQuestionView.setText(curq.getText());
             mySectionView.setText("Section: " + curq.getSection());
             String[] answers = curq.getAnswers();

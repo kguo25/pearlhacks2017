@@ -64,5 +64,12 @@
             android:text=""
             android:onClick="click"/>
 
+    <ProgressBar
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:max="100"
+        android:progress="0"/>
 
 </LinearLayout>
