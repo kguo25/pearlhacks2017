@@ -10,6 +10,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:gravity="top|center_horizontal"
     android:orientation="vertical"
+    android:background="@drawable/question_bg"
     tools:context="compsci290.edu.duke.ecopet.MainActivity">
 
     <TextView

@@ -35,7 +35,7 @@
         android:layout_alignParentBottom="true"
         android:text="Continue to fox's home"
         android:textSize="20sp"
-        android:background="@android:color/background_dark"
+        android:background="@color/colorFox"
         style="?android:attr/borderlessButtonStyle"
         android:onClick="launchFoxHome"/>
 
