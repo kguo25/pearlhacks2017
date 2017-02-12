@@ -14,7 +14,7 @@
     </question>
 
     <question>
-        <text>How often do you rent a car/carpool/Uber?</text>
+        <text>How often do you carpool rather than drive yourself?</text>
         <good>bottom</good>
         <importance>3</importance>
         <section>Transportation</section>
@@ -38,7 +38,7 @@
     </question>
 
     <question>
-        <text>How often do you walk/bike?</text>
+        <text>How often do you walk/bike over other means of transport?</text>
         <good>bottom</good>
         <importance>5</importance>
         <section>Transportation</section>
@@ -75,7 +75,7 @@
     </question>
 
     <question>
-        <text>How often do you use disposable dinnerware (paper plates/takeout boxes) and cutlery?</text>
+        <text>How often do you use disposable container (paper plates/takeout boxes) and cutlery?</text>
         <good>top</good>
         <importance>2</importance>
         <section>Food</section>
@@ -100,7 +100,7 @@
 
     <!--UTILITIES SECTION-->
     <question>
-        <text>How of often do you use a laptop/desktop computer?</text>
+        <text>How often do you use a laptop/desktop computer?</text>
         <good>top</good>
         <importance>3</importance>
         <section>Utilities</section>
@@ -112,7 +112,7 @@
     </question>
 
     <question>
-        <text>How of often do you use a smartphone?</text>
+        <text>How often do you use a smartphone?</text>
         <good>top</good>
         <importance>2</importance>
         <section>Utilities</section>
@@ -124,7 +124,7 @@
     </question>
 
     <question>
-        <text>How of often do you keep lights on indoors during the day (when natural lighting is an alternative)?</text>
+        <text>How often do you keep lights on indoors during the day (when natural lighting is an alternative)?</text>
         <good>top</good>
         <importance>3</importance>
         <section>Utilities</section>
