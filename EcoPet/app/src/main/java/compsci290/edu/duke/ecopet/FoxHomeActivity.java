@@ -47,8 +47,7 @@ public class FoxHomeActivity extends Activity {
     }
 
     public void updateScore(View v) {
-
+        Intent i = new Intent(FoxHomeActivity.this, EcoQuizActivity.class);
+        startActivity(i);
     }
-
-
 }
