@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.widget.TextView;
 
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.data.PieData;
@@ -47,8 +48,8 @@ public class ResultsActivity extends Activity {
             pieChart.setHoleRadius(40f);
             pieChart.setTransparentCircleRadius(0);
             pieChart.setDrawCenterText(true);
-            pieChart.setCenterText("Score Distribution");
-            pieChart.setCenterTextSize(20);
+            pieChart.setCenterText(totalScore + "");
+            pieChart.setCenterTextSize(40);
 
             ArrayList<PieEntry> entries = new ArrayList<PieEntry>();
             entries.add(new PieEntry((float) portScore / totalScore, "Transportation"));
@@ -62,7 +63,8 @@ public class ResultsActivity extends Activity {
 
             //formatting
             data.setValueFormatter(new PercentFormatter());
-            data.setValueTextSize(12f);
+            data.setValueTextSize(16f);
+            pieChart.setEntryLabelTextSize(16f);
             data.setValueTextColor(Color.WHITE);
             pieChart.getLegend().setEnabled(false);
             pieChart.setData(data);

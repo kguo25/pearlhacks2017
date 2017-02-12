@@ -124,36 +124,36 @@ public class EcoQuizActivity extends Activity{
         String section = curq.getSection();
         int importance = curq.getImportance();
         switch(v.getId()) {
-            //THIS SHOULD MAYBE WORK?
             case R.id.button1:
                 if (!scores.keySet().contains(section)) {
                     scores.put(section, 0);
                 }
-                scores.put(section, importance*(mult % 6) + scores.get(section));
+                scores.put(section, mult*importance*(mult % 6)-1 + scores.get(section));
                 break;
             case R.id.button2:
                 if (!scores.keySet().contains(section)) {
                     scores.put(section, 0);
                 }
-                scores.put(section, importance*(mult*2 % 6) + scores.get(section));
+                scores.put(section, mult*importance*(mult*2 % 6)-1 + scores.get(section));
                 break;
             case R.id.button3:
                 if (!scores.keySet().contains(section)) {
                     scores.put(section, 0);
                 }
-                scores.put(section, importance*(mult*3 % 6) + scores.get(section));
+                scores.put(section, mult*importance*(mult*3 % 6)-1 + scores.get(section));
                 break;
             case R.id.button4:
                 if (!scores.keySet().contains(section)) {
                     scores.put(section, 0);
                 }
-                scores.put(section, importance*(mult*4 % 6) + scores.get(section));
+                scores.put(section, mult*importance*(mult*4 % 6)-1 + scores.get(section));
+                scores.put(section, mult*(mult*4 % 6)-1 + scores.get(section));
                 break;
             case R.id.button5:
                 if (!scores.keySet().contains(section)) {
                     scores.put(section, 0);
                 }
-                scores.put(section, importance*(mult*5 % 6) + scores.get(section));
+                scores.put(section, mult*importance*(mult*5 % 6)-1 + scores.get(section));
                 break;
             default:
                 break;
