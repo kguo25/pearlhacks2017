@@ -45,20 +45,19 @@ public class EcoQuizActivity extends Activity{
 
     @Override
     public void onRestoreInstanceState(Bundle savedInstanceState){
-        mIndex = savedInstanceState.getInt(INDEX);
+        mIndex = savedInstanceState.getInt(INDEX);/*
         scores.put("Transportation", savedInstanceState.getInt("Transportation"));
         scores.put("Food", savedInstanceState.getInt("Food"));
-        scores.put("Utilities", savedInstanceState.getInt("Utilities"));
+        scores.put("Utilities", savedInstanceState.getInt("Utilities"));*/
         askQuestion();
     }
 
     @Override
     public void onSaveInstanceState(Bundle state){
-        state.putInt(INDEX,mIndex);
-        state.putInt("Transportation", scores.get("Transportation"));
-        state.putInt("Utilities", scores.get("Utilities"));
-        state.putInt("Food", scores.get("Food"));
-
+        state.putInt(INDEX,mIndex);/*
+        for(String key : scores.keySet()) {
+            state.putInt(key, scores.get(key));
+        }*/
     }
 
     private void createQuiz(Context context) {
@@ -120,41 +119,42 @@ public class EcoQuizActivity extends Activity{
         if (!top) mult = -1;
         String section = curq.getSection();
         int importance = curq.getImportance();
+        System.out.println("mult is " + mult);
         switch(v.getId()) {
             case R.id.button1:
                 if (!scores.keySet().contains(section)) {
                     scores.put(section, 0);
                 }
-                scores.put(section, mult*importance*(mult % 6)-1 + scores.get(section));
+                scores.put(section, importance*(((6+mult*1) % 6)-1) + scores.get(section));
                 break;
             case R.id.button2:
                 if (!scores.keySet().contains(section)) {
                     scores.put(section, 0);
                 }
-                scores.put(section, mult*importance*(mult*2 % 6)-1 + scores.get(section));
+                scores.put(section, importance*(((6+mult*2) % 6)-1) + scores.get(section));
                 break;
             case R.id.button3:
                 if (!scores.keySet().contains(section)) {
                     scores.put(section, 0);
                 }
-                scores.put(section, mult*importance*(mult*3 % 6)-1 + scores.get(section));
+                scores.put(section, importance*(((6+mult*3) % 6)-1) + scores.get(section));
                 break;
             case R.id.button4:
                 if (!scores.keySet().contains(section)) {
                     scores.put(section, 0);
                 }
-                scores.put(section, mult*importance*(mult*4 % 6)-1 + scores.get(section));
-                scores.put(section, mult*(mult*4 % 6)-1 + scores.get(section));
+                scores.put(section, importance*(((6+mult*4) % 6)-1) + scores.get(section));
                 break;
             case R.id.button5:
                 if (!scores.keySet().contains(section)) {
                     scores.put(section, 0);
                 }
-                scores.put(section, mult*importance*(mult*5 % 6)-1 + scores.get(section));
+                scores.put(section, importance*(((6+mult*5) % 6)-1) + scores.get(section));
                 break;
             default:
                 break;
 
         }
+        System.out.println(scores.get(section) + "");
     }
 }
