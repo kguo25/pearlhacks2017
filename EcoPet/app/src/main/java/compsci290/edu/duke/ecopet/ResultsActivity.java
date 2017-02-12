@@ -32,14 +32,11 @@ public class ResultsActivity extends Activity {
         setContentView(R.layout.results_activity);
 
         //get the category scores
-        SharedPreferences sharedPref = this.getSharedPreferences("Section", 0);
-//        int portscore = sharedpref.getint("transportation", 0);
-//        int utilscore = sharedpref.getint("utilities", 0);
-//        int foodScore = sharedPref.getInt("food", 0);
-        int portScore = 20;
-        int utilScore = 15;
-        int foodScore = 43;
-        int totalScore = portScore + utilScore + foodScore
+        SharedPreferences prefs = getSharedPreferences("Sections", MODE_PRIVATE);
+        int portScore = prefs.getInt("Transportation", 0);
+        int utilScore = prefs.getInt("Utilities", 0);
+        int foodScore = prefs.getInt("Food", 0);
+        int totalScore = portScore + utilScore + foodScore;
 
         if (totalScore != 0) {
             //add values to pie chart
@@ -68,7 +65,6 @@ public class ResultsActivity extends Activity {
             data.setValueTextSize(12f);
             data.setValueTextColor(Color.WHITE);
             pieChart.getLegend().setEnabled(false);
-
             pieChart.setData(data);
             pieChart.invalidate(); // refresh
         }else{
