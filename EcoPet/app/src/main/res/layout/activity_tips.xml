@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/question_bg">
 
     <TextView
         android:layout_width="match_parent"
@@ -18,14 +19,13 @@
         android:textSize="16dp"
         android:padding="20dp"
         android:text="Here's some easy ways you can improve your EcoScore:\n
-- Use a reusable water bottle
-- Unplug your chargers, lamps, etc. when not in use
-- Carpool with friends when going off campus
-- Bring a tupperware to put food into rather than asking for a takeout container
-- Limit your time in the shower to less than 10 minutes
-- Put on a sweater instead of turning up the heater
+- Use a reusable water bottle\n
+- Unplug your chargers, lamps, etc. when not in use\n
+- Carpool with friends when going off campus\n
+- Bring a tupperware to put food into rather than asking for a takeout container\n
+- Limit your time in the shower to less than 10 minutes\n
+- Put on a sweater instead of turning up the heater\n
 - Dry your hands on a towel rather than waste paper towels"
-
         />
 
 </LinearLayout>

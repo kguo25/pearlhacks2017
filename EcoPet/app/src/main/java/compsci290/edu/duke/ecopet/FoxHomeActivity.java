@@ -1,6 +1,7 @@
 package compsci290.edu.duke.ecopet;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -40,7 +41,8 @@ public class FoxHomeActivity extends Activity {
     }
 
     public void improve(View v) {
-
+        Intent i = new Intent(FoxHomeActivity.this, TipsActivity.class);
+        startActivity(i);
     }
 
     public void updateScore(View v) {

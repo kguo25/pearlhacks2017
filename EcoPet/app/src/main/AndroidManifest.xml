@@ -23,6 +23,8 @@
             android:screenOrientation="portrait"></activity>
         <activity android:name=".FoxHomeActivity"
             android:screenOrientation="portrait"></activity>
+        <activity android:name=".TipsActivity"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>
