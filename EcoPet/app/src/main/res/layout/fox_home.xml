@@ -1,6 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fox_home_id">
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/fox_message"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:layout_below="@+id/linear_id"
+        android:text="">
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/linear_id"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_vertical"
+        android:paddingTop="15dp">
+        <Button
+            android:id="@+id/improve_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:text = "Find out how \nyou can improve"
+            android:onClick="improve">
+        </Button>
+
+        <Button
+            android:id="@+id/update_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Update EcoScore"
+
+            android:layout_marginLeft="25dp"
+            android:onClick="updateScore">
+        </Button>
+    </LinearLayout>
+
+
+</RelativeLayout>
