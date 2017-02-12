@@ -21,22 +21,23 @@ public class FoxHomeActivity extends Activity {
         int total = prefs.getInt("Total", 0);
         RelativeLayout l = (RelativeLayout)findViewById(R.id.fox_home_id);
         TextView t = (TextView)findViewById(R.id.fox_message);
-        if(total <= 15) {
+        if(total <= 35) {
             launchHappyFox(l, t);
         }
         else {
-            launchSadFox();
+            launchSadFox(l,t);
         }
     }
 
     public void launchHappyFox(RelativeLayout l, TextView t) {
 
         l.setBackground(getResources().getDrawable(R.drawable.fox_house));
-        t.setText("Thanks for being an eco-friend citizen! The fox is very happy.");
+        t.setText("Thanks for being an eco-friendly citizen! The fox is very happy.");
     }
 
-    public void launchSadFox() {
-
+    public void launchSadFox(RelativeLayout l, TextView t) {
+        l.setBackground(getResources().getDrawable(R.drawable.fox_dirtyhouse));
+        t.setText("You can improve in being a more eco-friedly citizen. The fox is very sad right now.");
     }
 
     public void improve(View v) {
