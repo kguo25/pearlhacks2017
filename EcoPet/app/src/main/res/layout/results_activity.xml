@@ -7,15 +7,22 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Your Results"
         android:padding="20dp"
         android:textAlignment="center"
         android:textSize="24sp"
-        android:fontFamily="sans-serif" />
+        android:fontFamily="sans-serif"
+        android:text="Your Results" />
 
     <com.github.mikephil.charting.charts.PieChart
         android:layout_width="match_parent"
         android:layout_height="400dp"
-        android:id="@+id/pieChart"></com.github.mikephil.charting.charts.PieChart>.
+        android:id="@+id/pieChart"></com.github.mikephil.charting.charts.PieChart>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:textAlignment="center"
+        android:text="Percentages indicate the distribution of points from your EcoScore"/>
 
 </LinearLayout>
