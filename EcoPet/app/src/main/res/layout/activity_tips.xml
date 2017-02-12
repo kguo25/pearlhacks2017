@@ -18,6 +18,14 @@
         android:textSize="16dp"
         android:padding="20dp"
         android:text="Here's some easy ways you can improve your EcoScore:\n
-                    "/>
+- Use a reusable water bottle
+- Unplug your chargers, lamps, etc. when not in use
+- Carpool with friends when going off campus
+- Bring a tupperware to put food into rather than asking for a takeout container
+- Limit your time in the shower to less than 10 minutes
+- Put on a sweater instead of turning up the heater
+- Dry your hands on a towel rather than waste paper towels"
+
+        />
 
 </LinearLayout>
