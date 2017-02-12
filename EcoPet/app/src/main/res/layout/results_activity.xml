@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:weightSum="1">
@@ -17,7 +17,8 @@
     <com.github.mikephil.charting.charts.PieChart
         android:layout_width="match_parent"
         android:layout_height="400dp"
-        android:id="@+id/pieChart"></com.github.mikephil.charting.charts.PieChart>
+        android:id="@+id/pieChart"
+        android:layout_below="@id/in_circle"></com.github.mikephil.charting.charts.PieChart>
 
     <TextView
         android:layout_width="match_parent"
@@ -25,6 +26,17 @@
         android:padding="20dp"
         android:textAlignment="center"
         android:textSize="20sp"
-        android:text="Percentages indicate the distribution of points from your EcoScore"/>
+        android:text="Percentages indicate the distribution of points from your EcoScore"
+        android:layout_below="@id/pieChart"/>
 
-</LinearLayout>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Continue to fox's home"
+        android:textSize="20sp"
+        android:shadowColor="@color/colorPrimaryDark"
+        style="?android:attr/borderlessButtonStyle"
+        android:onClick="launchFoxHome"/>
+
+</RelativeLayout>

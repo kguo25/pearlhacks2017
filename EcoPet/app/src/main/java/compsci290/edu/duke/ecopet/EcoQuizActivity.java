@@ -99,9 +99,6 @@ public class EcoQuizActivity extends Activity{
         }
         else {
             savePreferences();
-            SharedPreferences prefs = getSharedPreferences("Sections", MODE_PRIVATE);
-            int temp= prefs.getInt("Utilities", -1);
-            System.out.println(temp);
             Intent i = new Intent(EcoQuizActivity.this, ResultsActivity.class);
             startActivity(i);
             this.finish();

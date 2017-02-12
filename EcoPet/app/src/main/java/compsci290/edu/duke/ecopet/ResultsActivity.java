@@ -1,9 +1,11 @@
 package compsci290.edu.duke.ecopet;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import com.github.mikephil.charting.charts.PieChart;
@@ -38,6 +40,9 @@ public class ResultsActivity extends Activity {
         int utilScore = prefs.getInt("Utilities", 0);
         int foodScore = prefs.getInt("Food", 0);
         int totalScore = portScore + utilScore + foodScore;
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putInt("Total", totalScore);
+        editor.commit();
 
         if (totalScore != 0) {
             //add values to pie chart
@@ -74,6 +79,11 @@ public class ResultsActivity extends Activity {
         }
 
 
+    }
+
+    public void launchFoxHome(View v) {
+        Intent i = new Intent(ResultsActivity.this, FoxHomeActivity.class);
+        startActivity(i);
     }
 
 }

@@ -21,6 +21,8 @@
             android:screenOrientation="portrait"></activity>
         <activity android:name=".ResultsActivity"
             android:screenOrientation="portrait"></activity>
+        <activity android:name=".FoxHomeActivity"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>
